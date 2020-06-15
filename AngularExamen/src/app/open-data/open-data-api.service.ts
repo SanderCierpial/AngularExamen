@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IOpenData } from './open-data';
+import { OpenData } from './open-data';
 import { Observable } from 'rxjs';
 
 
@@ -12,9 +12,9 @@ export class OpenDataApiService {
 
 
 
-  private dataUrl = 'https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_publiek4/MapServer/292/query?where=1%3D1&outFields=naam&outSR=4326&f=json';
+  private dataUrl = 'https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_publiek1/MapServer/606/query?where=1%3D1&outFields=Diepte,Datum&outSR=4326&f=json';
   
-  //getGeoData(): Observable<IOpenData[]>{
-  //  return this.http.get<IOpenData[]>(this.dataUrl);
-  //}
+  getGeoData(){
+    return this.http.get(this.dataUrl);
+  }
 }

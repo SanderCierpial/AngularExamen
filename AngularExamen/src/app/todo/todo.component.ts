@@ -13,7 +13,7 @@ export class TodoComponent implements OnInit {
   public Todolijst = [];
   public Donelijst = [];
   public TodoModel : Todolist;
-  public TodoItem;
+  public Index : number;
 
 
   constructor(private _todoService:TodoService) { }
@@ -28,11 +28,9 @@ export class TodoComponent implements OnInit {
       item.checked = true;
       this._todoService.addDoneList(item);
       console.log('donelijst',this._todoService.Donelist);
-      this._todoService.TodoServicelist.splice((item.id-1),item.id);
+      this.Index = this.Todolijst.findIndex(x => x.id == item.id);
+      this._todoService.TodoServicelist.splice((this.Index),this.Index+1);
       this.Todolijst = this._todoService.getTodoList();
-    }
-    else{
-      this._todoService.Donelist.splice((item.id-1),item.id);
     }
     }
     addToDo(value){

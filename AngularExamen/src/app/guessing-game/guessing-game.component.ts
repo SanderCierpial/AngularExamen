@@ -47,7 +47,7 @@ export class GuessingGameComponent implements OnInit {
   }
 
   stopTimer(){
-    console.log('test');
+    console.log('Juist');
     clearInterval(this.interval);
   }
 }

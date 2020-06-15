@@ -33,8 +33,8 @@ export class DoneComponent implements OnInit {
       this._todoService.addToDoList(item);
       console.log('donechangeitem',item);
       console.log('todolist',this._todoService.TodoServicelist);
-      this.Index = this.Donelijst.findIndex(name => name == item.name);
-      this._todoService.Donelist.splice((item.id),item.id+1);
+      this.Index = this.Donelijst.findIndex(x => x.id == item.id);
+      this._todoService.Donelist.splice((this.Index),this.Index+1);
       this.Donelijst = this._todoService.getDoneList();
     }
   }
