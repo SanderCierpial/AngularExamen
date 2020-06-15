@@ -1,0 +1,7 @@
+<h1>Guess the number</h1>
+<h2>Raad het getal tussen 1 en 1000 zo snel mogelijk</h2>
+<label>Uw poging: </label><input #waagGok type="number" (keyup.enter)="onClick(gok.value)" waagGok.value=''/>
+<button (click)="onClick(waagGok.value)">Waag een gok</button>
+<p>Aantal pogingen : {{pogingen}}</p>
+<p>{{tip}}</p>
+<p>Tijd verstreken: {{time}} seconden</p>

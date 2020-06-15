@@ -1,0 +1,47 @@
+<h1>{{Naam}}</h1>
+<button (click)="onStart()">Start de workout</button>
+<div id=inhoud></div>
+<ul id="oef1" *ngFor = "let item of Oefeningen.slice(0, 1)">
+    <li>{{item.titel}}</li>
+    <li>{{item.beschrijving}}</li>
+</ul>
+<ul id="oef2" *ngFor = "let item of Oefeningen.slice(1, 2)">
+    <li>{{item.titel}}</li>
+    <li>{{item.beschrijving}}</li>
+</ul>
+<ul id="oef3" *ngFor = "let item of Oefeningen.slice(2, 3)">
+    <li>{{item.titel}}</li>
+    <li>{{item.beschrijving}}</li>
+</ul>
+<ul id="oef4" *ngFor = "let item of Oefeningen.slice(3, 4)">
+    <li>{{item.titel}}</li>
+    <li>{{item.beschrijving}}</li>
+</ul>
+<ul id="oef5" *ngFor = "let item of Oefeningen.slice(4, 5)">
+    <li>{{item.titel}}</li>
+    <li>{{item.beschrijving}}</li>
+</ul>
+<ul id="oef6" *ngFor = "let item of Oefeningen.slice(5, 6)">
+    <li>{{item.titel}}</li>
+    <li>{{item.beschrijving}}</li>
+</ul>
+<ul id="oef7" *ngFor = "let item of Oefeningen.slice(6, 7)">
+    <li>{{item.titel}}</li>
+    <li>{{item.beschrijving}}</li>
+</ul>
+<ul id="oef8" *ngFor = "let item of Oefeningen.slice(7, 8)">
+    <li>{{item.titel}}</li>
+    <li>{{item.beschrijving}}</li>
+</ul>
+<ul id="oef9" *ngFor = "let item of Oefeningen.slice(8, 9)">
+    <li>{{item.titel}}</li>
+    <li>{{item.beschrijving}}</li>
+</ul>
+<ul id="oef10" *ngFor = "let item of Oefeningen.slice(9, 10)">
+    <li>{{item.titel}}</li>
+    <li>{{item.beschrijving}}</li>
+</ul>
+<p id="resting">Resting</p>
+<p id="end">End of exercise</p>
+<br>
+<p id="time">Time: {{time}} seconden</p>
