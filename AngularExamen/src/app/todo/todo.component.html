@@ -11,8 +11,15 @@
     </div>
   </nav>
 
+<div class="angie text-center">
 <h1>ToDo list</h1>
-<input placeholder="To Do item"/>
-<button>Add to do</button>
+<input #add placeholder="To Do item"/>
+<button  (click)="addToDo(add.value); add.value=''">Add to do</button>
 
-<app-done class="donenone"></app-done>
+<div class="todolist" *ngFor = "let todo of Todolijst">
+    <mat-checkbox #checkbox [checked]="todo.checked" (change)="valueChange(checkbox.checked,todo,$event)" labelPosition="before">{{todo.name}}</mat-checkbox>
+</div>
+
+<app-done class="donenone" [parentData]="Donelijst"></app-done>
+
+</div>

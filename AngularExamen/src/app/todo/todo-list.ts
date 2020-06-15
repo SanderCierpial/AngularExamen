@@ -1,6 +1,10 @@
 export class Todolist{
-    naam:string;
-    constructor(naam:string){
-        this.naam = naam;
+    id:number;
+    name:string;
+    checked:boolean;
+    constructor(id:number,name:string,checked:boolean){
+        this.id = id;
+        this.name = name;
+        this.checked = checked;
     }
 }

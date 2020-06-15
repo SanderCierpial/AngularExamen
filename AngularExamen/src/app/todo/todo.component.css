@@ -13,3 +13,11 @@ a.active {
 .donenone{
     display: none;
 }
+
+.check{
+    margin-left: 50;
+}
+.angie{
+    margin-top: 150;
+    padding:100px;
+}
